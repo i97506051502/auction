@@ -7,7 +7,7 @@
 -->
 
 <% @items.each do |item| %>
-<li><a href="/items/<%= item.id %>"><%= item.name %></li>
+<li><a href="/items/<%= item.id %>"><%= item.name %></a><%= link_to '商品情報編集', "/items/#{item.id}/edit", class: "btn btn-default btn-xs" %></li>
 <% end %>
 
 <%#= link_to '新規商品登録', new_item_path %>
