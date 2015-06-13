@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get '/items/:id/edit' => 'items#edit'
+  patch '/items/:id' => 'items#update'
+
   get '/items/new' => 'items#new'
 
   # get '/items/:id' => 'items#hoge'
@@ -8,6 +11,10 @@ Rails.application.routes.draw do
   get '/items' => 'items#index'
 
   post '/items' => 'items#create'
+
+  # get '/items/:id/edit' => 'items#edit'
+  # patch '/items/:id' => 'items#update'
+
   # post '/items/new' => 'items#create'
   # patch '/items/new' => 'items#create'
 
